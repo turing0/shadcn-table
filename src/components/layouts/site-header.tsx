@@ -4,6 +4,7 @@ import { GitHubLogoIcon, VercelLogoIcon } from "@radix-ui/react-icons"
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/layouts/mode-toggle"
+import { UserNav } from "../user-nav"
 
 export function SiteHeader() {
   return (
@@ -25,8 +26,8 @@ export function SiteHeader() {
             Docs
           </Link>
         </nav>
-        <nav className="flex flex-1 items-center md:justify-end">
-          <Button variant="ghost" size="icon" className="size-8" asChild>
+        <nav className="flex flex-1 items-center md:justify-end space-x-3">
+          {/* <Button variant="ghost" size="icon" className="size-8" asChild>
             <Link
               aria-label="GitHub repo"
               href={siteConfig.links.github}
@@ -35,8 +36,9 @@ export function SiteHeader() {
             >
               <GitHubLogoIcon className="size-4" aria-hidden="true" />
             </Link>
-          </Button>
+          </Button> */}
           <ModeToggle />
+          <UserNav />
         </nav>
       </div>
     </header>
